@@ -3,3 +3,6 @@
 
 Here is my attempt on the leetcode databases problem set.
 Each folder contains .txt files with problem statement and my solution at the end.
+
+I gathered questions and answers from various sites and prepared a doc ". Hope this would help in your prep as well.
+
