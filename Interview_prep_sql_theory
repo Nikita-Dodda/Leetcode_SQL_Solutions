@@ -1,0 +1,76 @@
+-	1. Types of data languages:
+-	DDL – Data Definition Language – Create, Alter, Drop, Truncate, Rename 
+-	DML – Data Manipulation Language – Select, Insert, Update, Delete,Merge
+-	DCL – Data Control Language – Grant, Revoke
+-	TCL – Transaction Control Language - Roll back, Commit, Save Point
+
+
+-	2. Keys in sql :
+o	Super key
+o	Primary key
+o	Candidate key
+o	Unique key
+o	Composite key
+o	Foreign key
+o	Alternate key
+
+
+-	3. Sql querry execution procedure –
+  * From and joins
+  * where
+  * group by
+  * having 
+  * select
+  * distinct
+  * orderby
+  * limit
+
+
+-	4. Diff between char and varchar and varchar2 in sql 
+CHAR is fixed length and VARCHAR is variable
+VARCHAR is reserved to support distinction between NULL and empty string in future, as ANSI standard prescribes. 
+VARCHAR2 does not distinguish between a NULL and empty string, and never will. 
+If you rely on empty string and NULL being the same thing, you should use VARCHAR2.
+Example of char and varchar:
+char(2) used for STATE column - WA,TX,CA,AZ,OR etc.,
+Varchar(30) - Indicates it containes character length upto 30 
+
+
+-	5. Diff between Null and empty string in sql 
+-	NULL is a non value, like undefined. '' is an empty string with 0 characters.
+-	Eg: 	first name – “nikita”
+        last name – “dodda” 
+        Middle name – “”
+     Total name – Nikita Dodda    - this says there is exists no middle name 
+If middle name is NULL
+Total name – Nikita Dodda – But there might be some middle name too and we might not be aware of the middle name as it is entered as NULL
+
+
+-	6. Where and having in sql – where filters on rows and having filters on groups 
+  WHERE is used to select data in the original tables being processed.
+  HAVING is used to filter data in the result set that was produced by the query. This means it can reference aggregate values and aliases in the SELECT clause.
+-	For instance, can write:
+-	SELECT t1.val - t2.val diff
+-	FROM t1 JOIN t2 ON (some expression)
+-	HAVING diff > 10
+-	This wouldn't work using WHERE because diff is an alias, not one of the original table columns. You could write instead:
+-	SELECT t1.val - t2.val diff
+-	FROM t1 JOIN t2 ON (some expression)
+-	WHERE t1.val - t2.val > 10
+-	but then it may have to do all the subtractions twice: once for selecting, and again to produce the result set.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
